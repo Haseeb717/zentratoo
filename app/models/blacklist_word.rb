@@ -1,0 +1,2 @@
+class BlacklistWord < ApplicationRecord
+end

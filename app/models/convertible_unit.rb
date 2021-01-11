@@ -1,0 +1,2 @@
+class ConvertibleUnit < ApplicationRecord
+end
