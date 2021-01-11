@@ -5,7 +5,7 @@ ActiveAdmin.register Version do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :number
+  permit_params :number
   #
   # or
   #

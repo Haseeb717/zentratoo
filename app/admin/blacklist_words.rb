@@ -5,7 +5,7 @@ ActiveAdmin.register BlacklistWord do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :langugage, :word
+  permit_params :langugage, :word
   #
   # or
   #

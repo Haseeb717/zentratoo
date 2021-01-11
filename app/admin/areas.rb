@@ -5,7 +5,7 @@ ActiveAdmin.register Area do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :name, :non_quantitative_area
+  permit_params :name, :non_quantitative_area
   #
   # or
   #

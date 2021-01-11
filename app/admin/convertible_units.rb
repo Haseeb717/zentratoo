@@ -5,7 +5,7 @@ ActiveAdmin.register ConvertibleUnit do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :en_name, :de_name
+  permit_params :en_name, :de_name
   #
   # or
   #
