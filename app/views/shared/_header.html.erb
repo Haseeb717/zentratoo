@@ -1,0 +1,76 @@
+<!-- Top Bar Section Starts Here -->
+<section class="top-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+        <div class="topbar-left">
+          <p> 
+            <% if user_signed_in? %>
+              <%= link_to "PRODUCTS AND PETITIONS",home_screen3_path %>
+              <%= link_to "ALL COMPANIES",home_screen5_path %>
+              <%= link_to "ALERTS",home_screen7_path %>
+              <%= link_to home_screen8_path do %>
+                <i class="fa fa-search"> </i> 
+              <% end %>
+              <a href=""> Admin </a>
+              <%= link_to "Contact Us",home_screen15_path %>
+            <% end %>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+        <div class="topbar-right">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Deutsch
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">English</a></li>
+              <li><a href="#">Deutsch</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            More
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><%= link_to "Imprint",imprint_path %></li>
+              <li><%= link_to "Terms of Service",terms_of_service_path %></li>
+              <li><%= link_to "Help",help_path %></li>
+              <li><%= link_to "Data Privacy",data_privacy_path %></li>
+            </ul>
+          </div>
+          
+          <div class="sign-btn">
+            <% if user_signed_in? %>
+              <%= link_to 'Edit profile', edit_user_registration_path %> |
+              <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path %> |
+              <%= link_to "Login", new_user_session_path  %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Top Bar Section Ends Here -->
+<!-- Header Starts Here -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png" %>
+      <% end %>
+    </div>
+    <div class="navbar-custom2">
+      <span> Global Concentrated Trade Network </span>
+    </div>
+  </div>
+</header>
+<!-- Header Ends Here -->
+
+
+
