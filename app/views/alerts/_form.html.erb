@@ -1,0 +1,49 @@
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="create-offer-head">
+          <h1> Add New Alert</h1>
+        </div>
+        <div class="alerts-data">
+          <%= form_with(model: alert, local: true) do |form| %>
+            <div class="row">
+              <%= render "/layouts/alerts" %>
+            </div>
+            <div class="create-offer-data">
+              <div class="col-sm-12 col-md-4">
+                <div class="form-group" >
+                  <label>Product / Offer Name * </label>
+                  <%= form.select :request_id, options_for_select(Request.pluck(:name,:id)),{}, {:class=>"form-control",:required=>true } %>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                  <label>I want to </label>
+                  <%= form.select :alert_type, options_for_select(["Buy","Sell"]),{}, {:class=>"form-control",:required=>true } %>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                  <label>Area</label>
+                  <%= form.select :area_id, options_for_select(Area.pluck(:name,:id)),{}, {:class=>"form-control",:required=>true } %>
+                </div>
+              </div>
+
+              <%= form.hidden_field :user_id,:value=>current_user.id %>
+
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <%= form.submit 'Create Alert',:class=>"btn btn-primary"  %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <%= render "/shared/sidebar" %>
+    </div>
+  </div>
+</section>

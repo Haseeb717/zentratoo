@@ -1,0 +1,28 @@
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="user-main-sec">
+          <div class="user-profile">
+            <%= image_tag "user-pic.png" %>
+            <p> You do not have rating yet </p>
+          </div>
+          <div class="user-text">
+            <h1> Sparkradius </h1>
+            <h5> <b> Full Name: </b> <%= @company.company_name %> </h5>
+            <h5> <b> Country: </b> <%= @company.country %>  </h5>
+            <h5> <b> Area Code: </b> <%= @company.area_code %>  </h5>
+            <h5> <b> Phone: </b> <%= @company.phone %>  </h5>
+            <h5> <b> Fax: </b> <%= @company.fax %>  </h5>
+            <h5> <b> Email: </b> <%= @company.email %>  </h5>
+            <h5> <b> Language: </b> <%= @company.language %>  </h5>
+            <h5> <b> Address: </b> <%= @company.address %> </h5>
+            <h5> <b> Summary: </b> <%= @company.summary %> </h5>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="user-main-sec">
+          <div class="user-text">
+            <h1> Offer </h1>
+            <h5> <b> Name: </b> <%= @request.name %> </h5>
+            <h5> <b> Region: </b> <%= @request.region %>  </h5>
+            <h5> <b> Area: </b> <%= @request.area.name %>  </h5>
+            <h5> <b> Manufacture Date: </b> <%= @request.manufacture_date %>  </h5>
+            <h5> <b> Quantity: </b> <%= @request.quantity  %> <%= @request.convertible_unit.en_name if @request.convertible_unit.present? %>    </h5>
+            <h5> <b> Price: </b> <%= @request.category.title %> <%= @request.price %>  </h5>
+            <h5> <b> Category: </b> <%= @request.category.title %>  </h5>
+            <h5> <b> Description: </b> <%= @request.description %> </h5>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>

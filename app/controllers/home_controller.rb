@@ -2,46 +2,31 @@ class HomeController < ApplicationController
   def index
   end
 
-  def screen2
+  def companies
+    @companies = User.where(:status=>true).all
   end
 
-  def screen3
+  def company
+    @company = User.find(params[:id])
   end
 
-  def screen4
+  def offers
+    query = Hash.new
+    query[:area_id] = params[:area_id] if params[:area_id]
+    query[:request_type] = params[:request_type].present? ? params[:request_type] : "Sell"
+    query[:category_id] = params[:category_id] if params[:category_id]
+    query[:region] = params[:region] if params[:region_id]
+    
+    if params[:search].present?
+      @requests = Request.where(query).all
+    else
+      @requests = Request.where(query).where('name LIKE (?) and description LIKE (?)',"%#{params[:search]}%","%#{params[:search]}%")
+    end
   end
 
-  def screen5
-  end
-
-  def screen6
-  end
-
-  def screen7
-  end
-
-  def screen8
-  end
-
-  def screen9
-  end
-
-  def screen10
-  end
-
-  def screen11
-  end
-
-  def screen12
-  end
-
-  def screen13
-  end
-
-  def screen14
-  end
-
-  def screen15
+  def offer
+    @request = Request.find(params[:id])
+    View.create(:viewable_id=>@request.id,:viewable_type=>"Request")
   end
 
   def help

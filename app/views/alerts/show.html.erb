@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Request:</strong>
+  <%= @alert.request %>
+</p>
+
+<p>
+  <strong>Alert type:</strong>
+  <%= @alert.alert_type %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @alert.area %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @alert.user %>
+</p>
+
+<%= link_to 'Edit', edit_alert_path(@alert) %> |
+<%= link_to 'Back', alerts_path %>

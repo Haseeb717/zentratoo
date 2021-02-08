@@ -1,0 +1,50 @@
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="create-offer-head">
+          <h1> Alerts</h1>
+        </div>
+        <div class="alerts-data">
+          <% @alerts.each do |alert| %>
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                <div class="form-field3">
+                  <p> Produkt / Offer Name * </p>
+                  <b> <%= alert.request.name %></b>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                <div class="form-field3">
+                  <p> I Want To </p>
+                  <b><%= alert.alert_type %></b>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+                <div class="form-field3">
+                  <p> Area </p>
+                  <b> <%= alert.area.name %></b>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg- col-sm-2 col-xs-12">
+                
+                  <%= link_to 'Edit', edit_alert_path(alert),:class=>"btn btn-info" %>
+                
+                  <%= link_to 'Destroy', alert, method: :delete, data: { confirm: 'Are you sure?' },:class=>"btn btn-danger" %>
+                
+              </div>
+            </div>
+          <% end %>
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+              <div class="alerts-actions">
+                <%= link_to 'Add New', new_alert_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render "/shared/sidebar" %>
+    </div>
+  </div>
+</section>

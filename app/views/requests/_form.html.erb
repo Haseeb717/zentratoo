@@ -1,0 +1,176 @@
+
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="create-offer-head">
+          <h1> Create Request </h1>
+        </div>
+        <%= form_with(model: request, local: true) do |form| %>
+          <div class="row">
+            <%= render "/layouts/alerts" %>
+          </div>
+          <div class="create-offer-data">
+            <div class="col-sm-12 col-md-4">
+              <div class="form-group" >
+                <p> Request Type  </p>
+                <%= form.select :request_type, options_for_select(["Buy","Sell"]),{}, {:class=>"form-control",:required=>true } %>
+              </div>
+            </div>
+
+            <%= form.hidden_field :user_id,:value=>current_user.id %>
+
+            <div class="col-sm-12 col-md-4">
+              <div class="form-group">
+                <p> Area </p>
+                <%= form.select :area_id, options_for_select(Area.pluck(:name,:id)),{}, {:class=>"form-control",:required=>true } %>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+              <div class="form-group">
+                <p> Category  </p>
+                <%= form.select :category_id, options_for_select(Category.pluck(:title,:id)),{}, {:class=>"form-control",:required=>true } %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group">
+                <p> Name of product of an offer (what is being offered?) </p>
+                <%= form.text_field :name,:class=>"form-control",:required=>true %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group">
+                <p> Region </p>
+                <%= form.text_field :region,:class=>"form-control",:required=>true %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group">
+                <p> Description </p>
+                <%= form.text_area :description,:class=>"form-control",:required=>true %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group ">
+                <p> Date of Manufacture </p>
+                <%= form.date_select :manufacture_date,:class=>"form-control" %>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <p> Quantity  </p>
+                <%= form.text_field :quantity,:class=>"form-control" %>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <p> Unit Bag  </p>
+                <%= form.select :convertible_unit_id, options_for_select(ConvertibleUnit.pluck(:en_name,:id)),{}, {:class=>"form-control",:required=>true } %>
+              </div>
+            </div>
+
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <p> Currency  </p>
+                <%= form.select :currency_id, options_for_select(Currency.pluck(:title,:id)),{}, {:class=>"form-control",:required=>true } %>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <p> Price  </p>
+                <%= form.text_field :price,:class=>"form-control",:required=>true %>
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group form-field2">
+                <p> Image URL </p>
+                <input type="file" name="">
+                <!-- <button>Delete</button> -->
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group form-field2">
+                <p> Document Description </p>
+                <input type="text" name="" class="form-control">
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group form-field2">
+                <p> Document (PDF Only) </p>
+                <input type="file" name="">
+                <!-- <button>Delete</button> -->
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= form.submit 'Create Request',:class=>"btn btn-primary"  %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+        <div class="info-box">
+          <h4 class="bg-orange"> New Companies </h4>
+          <h6>
+            <a href=""> General UI </a>
+          </h6>
+          <h6>
+            <a href=""> Sparkradius </a>
+          </h6>
+        </div>
+        <div class="info-box">
+          <h4 class="bg-maroon"> Newest Offers </h4>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+        </div>
+        <div class="info-box">
+          <h4 class="bg-maroon"> Newest Offers </h4>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+          <h6>
+            <span> Ein Laptop Zum SPecien :)  </span>
+            <a href=""> 7 Days </a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

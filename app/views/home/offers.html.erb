@@ -1,0 +1,79 @@
+<section class="pad1 bg-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="create-offer-head">
+          <h1> Search Offers </h1>
+        </div>
+        <div class="search-offers">
+          <div class="row">
+            <%= form_tag offers_path,method: :get  do %>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <div class="form-field3">
+                  <p> Request Type </p>
+                  <%= select_tag :request_type, options_for_select(["Buy","Sell"]),{:prompt=>"Select Request Type"} %>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <div class="form-field3">
+                  <p> Area </p>
+                  <%= select_tag :area, options_for_select(Area.pluck(:name,:id)),{:prompt=>"Select Area"} %>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <div class="form-field3">
+                  <p> Category </p>
+                  <%= select_tag :category, options_for_select(Category.pluck(:title,:id)),{:prompt=>"Select Category"} %>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <div class="form-field3">
+                  <p> Region </p>
+                  <%= select_tag :region, options_for_select(Request.all.pluck(:region).uniq),{:prompt=>"Select Region"} %>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <div class="form-field3">
+                  <p> Search </p>
+                  <%= text_field_tag :search,nil,:placeholder=>"Search"  %>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
+                <%= submit_tag 'Search',:class=>"btn btn-info",:style=>"margin-top: 30px;"%>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="alerts-data2">
+          <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive table-type2" id="offers">
+            <thead>
+              <tr>
+                <th> Product Name </th>
+                <th> Area </th>
+                <th> Quantity</th>
+                <th> Price Per Unit/ Service Price </th>
+                <th> Region </th>
+                <th> Email of Seller </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @requests.each do |request| %>
+                <tr>
+                  <td> <%= link_to request.name,offer_path(:id=>request.id) %> </td>
+                  <td> <%= request.area.name %> </td>
+                  <td> <%= request.quantity %> </td>
+                  <td> <%= request.price %> </td>
+                  <td> <%= request.region %> </td>
+                  <td> <%= request.user.email if request.user.present? %> </td>
+                </tr>
+                
+              <% end %>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <%= render "/shared/sidebar" %>
+    </div>
+  </div>
+</section>

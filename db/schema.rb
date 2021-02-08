@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_11_105957) do
+ActiveRecord::Schema.define(version: 2021_02_06_080721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,18 @@ ActiveRecord::Schema.define(version: 2021_01_11_105957) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "alerts", force: :cascade do |t|
+    t.bigint "request_id"
+    t.string "alert_type"
+    t.bigint "area_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_alerts_on_area_id"
+    t.index ["request_id"], name: "index_alerts_on_request_id"
+    t.index ["user_id"], name: "index_alerts_on_user_id"
+  end
+
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.boolean "non_quantitative_area"
@@ -55,6 +67,14 @@ ActiveRecord::Schema.define(version: 2021_01_11_105957) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.bigint "area_id"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_categories_on_area_id"
+  end
+
   create_table "convertible_units", force: :cascade do |t|
     t.string "en_name"
     t.string "de_name"
@@ -66,6 +86,29 @@ ActiveRecord::Schema.define(version: 2021_01_11_105957) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string "request_type"
+    t.bigint "category_id"
+    t.bigint "area_id"
+    t.string "name"
+    t.string "region"
+    t.text "description"
+    t.date "manufacture_date"
+    t.text "document_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "currency_id"
+    t.bigint "convertible_unit_id"
+    t.integer "quantity"
+    t.float "price"
+    t.bigint "user_id"
+    t.index ["area_id"], name: "index_requests_on_area_id"
+    t.index ["category_id"], name: "index_requests_on_category_id"
+    t.index ["convertible_unit_id"], name: "index_requests_on_convertible_unit_id"
+    t.index ["currency_id"], name: "index_requests_on_currency_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,6 +139,7 @@ ActiveRecord::Schema.define(version: 2021_01_11_105957) do
     t.string "unit_system"
     t.string "payment_way"
     t.string "membership_level"
+    t.boolean "status", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -107,4 +151,20 @@ ActiveRecord::Schema.define(version: 2021_01_11_105957) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "views", force: :cascade do |t|
+    t.integer "viewable_id"
+    t.string "viewable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "alerts", "areas"
+  add_foreign_key "alerts", "requests"
+  add_foreign_key "alerts", "users"
+  add_foreign_key "categories", "areas"
+  add_foreign_key "requests", "areas"
+  add_foreign_key "requests", "categories"
+  add_foreign_key "requests", "convertible_units"
+  add_foreign_key "requests", "currencies"
+  add_foreign_key "requests", "users"
 end

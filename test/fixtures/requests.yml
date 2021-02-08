@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  request_type: MyString
+  category: one
+  area: one
+  name: MyString
+  region: MyString
+  description: MyText
+  manufacture_date: 2021-01-24
+  document_description: MyText
+
+two:
+  request_type: MyString
+  category: two
+  area: two
+  name: MyString
+  region: MyString
+  description: MyText
+  manufacture_date: 2021-01-24
+  document_description: MyText

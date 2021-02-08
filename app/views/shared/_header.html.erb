@@ -5,12 +5,25 @@
       <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
         <div class="topbar-left">
           <p> 
+
+              
+
             <% if user_signed_in? %>
-              <%= link_to "PRODUCTS AND PETITIONS",home_screen3_path %>
-              <%= link_to "ALL COMPANIES",home_screen5_path %>
-              <%= link_to "ALERTS",home_screen7_path %>
-              <%= link_to home_screen8_path do %>
-                <i class="fa fa-search"> </i> 
+              <div class="dropdown leftdropdown" style="display: inline;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="padding-top: 0;padding-bottom: 0;">
+                  PRODUCTS AND PETITIONS
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><%= link_to "Offers",offers_path,:style=>"margin-top: 0px" %></li>
+                  <li><%= link_to "Requests",requests_path,:style=>"margin-top: -5px"  %></li>
+                  <li><%= link_to "Create Offer / Request",new_request_path,:style=>"margin-top: -5px"  %></li>
+                </ul>
+              </div>
+
+              <%= link_to "ALL COMPANIES",companies_path %>
+              <%= link_to "ALERTS",alerts_path %>
+              <%= link_to offers_path do %>
+                <i class="fa fa-search"></i>
               <% end %>
               <a href=""> Admin </a>
               <%= link_to "Contact Us",home_screen15_path %>
@@ -32,7 +45,7 @@
           </div>
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            More
+              More
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><%= link_to "Imprint",imprint_path %></li>
@@ -42,13 +55,13 @@
             </ul>
           </div>
           
+
           <div class="sign-btn">
             <% if user_signed_in? %>
               <%= link_to 'Edit profile', edit_user_registration_path %> |
               <%= link_to "Logout", destroy_user_session_path, method: :delete  %>
             <% else %>
-              <%= link_to "Sign up", new_user_registration_path %> |
-              <%= link_to "Login", new_user_session_path  %>
+              <%= link_to "My Zentratoo", new_user_session_path  %>
             <% end %>
           </div>
         </div>

@@ -36,7 +36,7 @@ gem 'activeadmin'
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'country_select', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
