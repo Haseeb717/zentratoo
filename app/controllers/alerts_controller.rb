@@ -15,6 +15,7 @@ class AlertsController < InheritedResources::Base
         format.html { render :new }
         format.json { render json: @alert.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   private
