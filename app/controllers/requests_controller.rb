@@ -22,7 +22,7 @@ class RequestsController < InheritedResources::Base
   private
 
     def request_params
-      params.require(:request).permit(:request_type, :category_id, :area_id, :name, :region, :description, :manufacture_date, :document_description,:quantity,:price,:convertible_unit_id,:currency_id)
+      params.require(:request).permit(:request_type, :category_id, :area_id, :name, :region, :description, :manufacture_date, :document_description,:quantity,:price,:convertible_unit_id,:currency_id,:user_id)
     end
 
 end

@@ -40,4 +40,12 @@ class HomeController < ApplicationController
 
   def data_privacy
   end
+
+  def get_categories
+    area_id = params[:area_id]
+    @areas = Category.where(:area_id=>area_id)
+    respond_to do |format|
+      format.json { render json: @areas }
+    end
+  end
 end

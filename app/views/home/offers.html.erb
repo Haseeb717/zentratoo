@@ -77,3 +77,24 @@
     </div>
   </div>
 </section>
+
+<script>
+  $(document).ready(function() {
+    $("#area").on('change', function(){
+      $.ajax({
+        url: "/get_categories",
+        type: "GET",
+        data: {area_id: $(this).val()},
+        success: function(data) {
+          $("#category").children().remove();
+          var listitems = []; 
+          $.each(data,function(key, value) { 
+
+            listitems += '<option value="' + value.id+ '">' + value.title + '</option>'; 
+          }); 
+          $("#category").append(listitems);
+        }
+      })
+    });
+  });
+</script>
