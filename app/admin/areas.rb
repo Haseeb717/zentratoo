@@ -5,6 +5,8 @@ ActiveAdmin.register Area do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
+  menu :label => "Areas", :parent => "Areas" 
+ 
   permit_params :name, :non_quantitative_area,categories_attributes: [:id, :title, :_destroy]
   
 
