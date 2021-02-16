@@ -31,7 +31,7 @@
   <div class="info-box">
     <h4 class="bg-maroon"> Most Viewed Requests </h4>
     
-    <% Request.left_joins(:views).where('request_type =?',"Sell").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
+    <% Request.left_joins(:views).where('request_type =?',"Buy").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
       <h6>
         <%= link_to request.name,request_path(:id=>request.id) %>
         <span> <%= request.created_at.to_date %>  </span>
@@ -41,7 +41,7 @@
 
   <div class="info-box">
     <h4 class="bg-maroon"> Most Viewed Offers </h4>
-    <% Request.left_joins(:views).where('request_type =?',"Buy").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
+    <% Request.left_joins(:views).where('request_type =?',"Sell").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
       <h6>
         <%= link_to request.name,request_path(:id=>request.id) %>
         <span> <%= request.created_at.to_date %>  </span>
