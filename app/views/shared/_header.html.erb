@@ -38,8 +38,8 @@
             <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">English</a></li>
-              <li><a href="#">Deutsch</a></li>
+              <li><%= link_to 'English', root_path(locale: :en) %></li>
+              <li><%= link_to 'Deutsch', root_path(locale: :de) %></li>
             </ul>
           </div>
           <div class="dropdown">
