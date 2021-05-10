@@ -1,6 +1,6 @@
 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
   <div class="info-box">
-    <h4 class="bg-orange"> New Companies </h4>
+    <h4 class="bg-orange"> Newest Companies </h4>
     <h6>
       <% User.where(:status=>true).last(2).each do |company| %>
         <%= link_to company.company_name,company_path(:id=>company.id) %>
@@ -10,7 +10,7 @@
   <div class="info-box">
     <h4 class="bg-maroon"> Newest Offers </h4>
 
-    <% Request.where(:request_type=>"Sell").last(5).each do |request| %>
+    <% Request.where(:request_type=>"Buy").last(5).each do |request| %>
       <h6>
         <%= link_to request.name,request_path(:id=>request.id) %>
         <span> <%= request.created_at.to_date %>  </span>
@@ -20,7 +20,17 @@
   </div>
   <div class="info-box">
     <h4 class="bg-maroon"> Newest Requests </h4>
-    <% Request.where(:request_type=>"Buy").last(5).each do |request| %>
+    <% Request.where(:request_type=>"Sell").last(5).each do |request| %>
+      <h6>
+        <%= link_to request.name,request_path(:id=>request.id) %>
+        <span> <%= request.created_at.to_date %>  </span>
+      </h6>
+    <% end %>
+  </div>
+
+  <div class="info-box">
+    <h4 class="bg-maroon"> Most Viewed Offers </h4>
+    <% Request.left_joins(:views).where('request_type =?',"Buy").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
       <h6>
         <%= link_to request.name,request_path(:id=>request.id) %>
         <span> <%= request.created_at.to_date %>  </span>
@@ -31,16 +41,6 @@
   <div class="info-box">
     <h4 class="bg-maroon"> Most Viewed Requests </h4>
     
-    <% Request.left_joins(:views).where('request_type =?',"Buy").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
-      <h6>
-        <%= link_to request.name,request_path(:id=>request.id) %>
-        <span> <%= request.created_at.to_date %>  </span>
-      </h6>
-    <% end %>
-  </div>
-
-  <div class="info-box">
-    <h4 class="bg-maroon"> Most Viewed Offers </h4>
     <% Request.left_joins(:views).where('request_type =?',"Sell").group(:id).order('COUNT(views.id) DESC').limit(5).each do |request| %>
       <h6>
         <%= link_to request.name,request_path(:id=>request.id) %>
@@ -48,4 +48,6 @@
       </h6>
     <% end %>
   </div>
+
+  
 </div>

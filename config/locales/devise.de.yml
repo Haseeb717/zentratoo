@@ -1,0 +1,64 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+de:
+  devise:
+    confirmations:
+      confirmed: "Ihre E Mail Adresse wurde erfolgreich bestätigt"
+      confirmed_and_signed_in: "Vielen Dank für Deine Registrierung. Du bist jetzt angemeldet."
+      send_instructions: "Sie erhalten in ein paar Minuten eine E Mail mit Anweisungen, wie Sie Ihre E Mail Adresse bestätigen können."
+      send_paranoid_instructions: "Wenn Ihre E Mail Adresse in unserer Datenbank existiert, Sie erhalten in ein paar Minuten eine E Mail mit Anweisungen, wie Sie Ihre E Mail Adresse bestätigen können "
+    failure:
+      already_authenticated: "Sie sind bereits eingeloggt."
+      inactive: "Ihr Konto ist noch nicht aktiviert ."
+      invalid: "Ungültiger Usernamen oder Passwort"
+      invalid_token: "Der Anmelde-Token ist ungültig."
+      locked: "Ihr Konto ist gesperrt"
+      last_attempt: "Sie habe noch einen Log In Versuch bevor Ihr Konto gesperrt wird."
+      not_found_in_database: "Ungültiger Usernamen oder Passwort."
+      timeout: "Ihr Sitzung ist abgelaufen, bitte loggen Sie sich erneut ein."
+      unauthenticated: "Sie müssen sich anmelden oder einloggen um fortzufahren."
+      unconfirmed: "Sie müssen Ihre E Mail bestätigen, bevor Sie fortfahren können."
+    mailer:
+      confirmation_instructions:
+        subject: "Anleitung zur Bestätigung Deines Accounts"
+      reset_password_instructions:
+        subject: "Passwort Wiederhestellungsanweisungen"
+      unlock_instructions:
+        subject: "Entsperr Anweisungen"
+    omniauth_callbacks:
+      failure: "Du konntest nicht Deinem %{kind}-Account angemeldet werden, weil '%{reason}'."
+      success: "Erfolgreich identifiziert von Konto."
+    passwords:
+      no_token: "Sie können diese Seite nicht öffnen ohne den Passwort Reset Link zu nutzen."
+      send_instructions: "Du erhältst in wenigen Minuten eine E-Mail, mit der Du Deine Registrierung bestätigen kannst."
+      send_paranoid_instructions: "Sie erhalten in ein paar Minuten eine Nachricht mit Informationen um das Passwort zurückzusetzen, Wenn Ihre E Mail in unserer Datenbasis vorhanden ist Sie erhalten in ein paar Minuten einen Link um das Passwort zurückzusetzen zugesandt ."
+      updated: "Dein Passwort wurde geändert. Du bist jetzt angemeldet."
+      updated_not_active: "Ihr Passwort wurde erfolgreich geändert."
+    registrations:
+      user:
+        address_not_verified: 'Die Adresse ist noch nicht bestätigt'
+        verify_error: 'Bestätigungsfehler der Adresse.'    
+      destroyed: "DAuf Wiedersehen, Ihr Konto wurde erfolgreich gekündigt, wir hoffen Sie bald wiederzusehen."
+      signed_up: "Sie werden umgehend nach Erstellung Ihrer Mitgliedschaft von uns kontaktiert."
+      signed_up_but_inactive: "Sie haben sich erfolgreich angemeldet Wir konnten Sie nicht einloggen, da Ihr Konto noch nicht verifiziert ist"
+      signed_up_but_locked: "Du hast dich erfolgreich registriert. Wir konnten Dich noch nicht anmelden, da Dein Account gesperrt ist."
+      signed_up_but_unconfirmed: "Du hast Dich erfolgreich registriert. Wir konnten Dich noch nicht anmelden, da Dein Account noch nicht bestätigt ist. Du erhältst in Kürze eine E-Mail mit der Anleitung, wie Du Deinen Account freischalten kannst."
+      update_needs_confirmation: "Deine Daten wurden aktualisiert, aber Du musst Deine neue E-Mail-Adresse bestätigen. Du erhälsts in wenigen Minuten eine E-Mail, mit der Du die Änderung Deiner E-Mail-Adresse abschließen kannst."
+      updated: "Deine Daten wurden aktualisiert."
+    sessions:
+      signed_in: "Erfolgreich angemeldet."
+      signed_out: "Erfolgreich abgemeldet."
+    unlocks:
+      send_instructions: "Du erhältst in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Deinen Account entsperren können."
+      send_paranoid_instructions: "Falls Deine E-Mail-Adresse in unserer Datenbank existiert erhältst Du in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Deinen Account entsperren kannst."
+      unlocked: "Dein Account wurde entsperrt. Du bist jetzt angemeldet."
+  errors:
+    messages:
+      already_confirmed: "wurde bereits bestätigt"
+      confirmation_period_expired: "muss innerhalb %{period} bestätigt werden, bitte fordere einen neuen Link an"
+      expired: "ist abgelaufen, bitte neu anfordern"
+      not_found: "nicht gefunden"
+      not_locked: "ist nicht gesperrt"
+      not_saved:
+        one: "Konnte %{resource} nicht speichern: ein Fehler."
+        other: "Konnte %{resource} nicht speichern: %{count} Fehler."

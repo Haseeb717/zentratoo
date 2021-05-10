@@ -1,0 +1,466 @@
+---
+de:
+  footer:
+    copyright: "©2015-2016 Zentratoo. All rights reserved"
+    version: Version
+  simple_form:
+    labels:
+      defaults:
+        name_en: Name (English)
+        name_de: Name (deutsch)
+        banned_words_de: Gesperrte Wörter (Deutsch)
+        banned_words_en: Gesperrte Wörter (English)
+  navigation:
+    back: Zurück
+  helpers:
+    submit: 
+      area:
+        update: Bereich aktualisieren
+      offer:
+        submit: Gesuch/Angebot speichern
+        update: Gesuch/Angebot speichern
+    label:
+      user:
+        remember_me: Erinnern sie mich
+  rate:
+    error: 'Fehler : Bewertung wurde nicht gespeichert'
+  registration:
+    validations:
+      required_field: Dies ist ein Pflichtfeld
+      email: Bitte um Mitteilung einer gültigen E Mail Adresse
+    payment_method: Zahlungs Methode
+    offline_payment: Offline Zahlung bitte unsichtbar machen
+  devise:
+    sign_in: Anmelden
+  errors:
+    cant_be_blank: Dieses Feld darf nicht frei bleiben
+    must_be_a_number: Muss eine Zahl sein
+  confirmation:
+    are_you_sure: Sind Sie sicher
+  navbar:
+    all_companies: Alle Firmen
+    terms: Benutzungsbedingungen
+    contact: Kontaktieren Sie uns
+    imprint: Impressum
+    about_us: "Über uns"
+    help: Hilfe
+    data_privacy: Datenschutz
+    offer: Angebot/Gesuch erstellen 
+    search: Suche
+    alerts: Benachrichtigungsfunktion
+    products_and_petitions: Gesuche und Angebote
+    petitions: Gesuche
+    products: Angebote
+    login: Log In
+    register: Registrierung
+    sign_out: Logout
+    more: Rechtliches / Impressum
+    my_zentratoo: Mein Zentratoo    
+    dropdown:
+      language: Sprache
+      english: Englisch
+      german: Deutsch
+    admin_dropdown:
+      admin: Administrator
+      subscription_confirmation: Abonnement Bestätigung
+      blacklisted_words: Schwarze Liste Wörter
+      currencies: Währungen
+      areas: Bereiche
+      units: Einheiten
+      list_of_all_companies: Liste aller Firmen
+      banned_users: Gesperrte Nutzer
+      version_number: Version
+    second:
+      global: Global Concentrated Trade Network
+  pages:
+    about_us:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    contact:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    help:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    how_to_buy:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    how_to_sell:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    imprint:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+    terms:
+      text: DE - Numquam et voluptate veritatis minus perspiciatis facere laboriosam.
+        Non doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus
+        repudiandae aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem
+        eius nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque
+        eligendi natus perferendis iure sint est ut.
+  widget:
+    most_recent_users:
+      new_companies: Neueste Firmen
+    most_visited:
+      products: Am häufigsten aufgerufene Produkte
+      petitions: Am häufigsten aufgerufene Gesuche
+      name: Name
+      created: Erstellt
+    most_recent:
+      products: Neueste Angebote
+      petitions: Neueste Gesuche
+      name: Name
+      created: Erstellt
+  currency:
+    currencies_warning: " Achtung : Nicht löschen, da schon im Angebot verwendet"
+    currency_conversions: Währungsumrechner auf oanda.com (wird in einem neuen Fenster geöffnet)
+    in_use: Sie können keine Währung löschen, die bereits verwendet wurde
+    show: Zeigen
+    create: Speichern
+    edit: Bearbeiten
+    destroy: Löschen
+    new: neue Währung
+  unit:
+    listing: Erfassung nicht umrechenbarer Einheiten
+    si: SI
+    imperial: Anglo-amerik.
+    in_use: Sie können keine Einheit löschen, die bereits verwendet wurde
+    show: Zeigen
+    create: Speichern
+    edit: Bearbeiten
+    destroy: Löschen
+    new: neue Einheit
+    name: Name
+    symbol: Symbol
+  unit_conversion:
+    reference: Referrenz
+    unit_symbol: Einheitenkennzeichnung
+    unit_prefix: Einheiten Präfix
+    unit_terms: Einheiten Begriff
+    unit_property: Einheiten Eigentum
+    si_unit: SI Einheit
+    imperial_unit: Reichseinheit bitte löschen
+    available_units: 'Vorhandene Einheiten Symbole '
+    hint: Sie müssen ein vorhandenes Symbol nutzen
+    listing: Aufstellung von Einheitsumrechnungen
+    si_unit_name_de: SI Einheiten Name Deutsch
+    si_unit_name_en: SI Einheiten Name Englisch
+    si_symbol: SI Symbol
+    imperial_symbol: Kaiserliches Symbol bitte löschen
+    imperial_unit_name_de: anglo-amerik. Einheit / Name deutsch
+    imperial_unit_name_en: anglo-amerik. Einheit / Name englisch
+    si_conversion_rate: SI Umrechnungskurs
+    in_use: Sie können keine Einheitsumrechnung löschen, die bereits verwendet wurde
+    show: Zeigen
+    create: Speichern
+    edit: Bearbeiten
+    destroy: Löschen
+    new: neue Einheitenumrechner
+  subscription:
+    complete_renewal: Komplette Überarbeitung
+    approve: Bestätigung
+    cost: Kosten
+    subtotal: Gesamter Betrag
+    discount: Rabatt
+    invoice_subtotal: Rechnungssumme gesamt unsichtbar machen
+    awaiting_confirmation: Die Verlängerung Ihrer Mitgliedschaft erfordert eine Bestätigung
+    flash_success: Danke, Sie werden sofort nach Erstellung Ihrer Mitgliedschaft benachrichtigt
+    flash_error: Fehler ! Ihre Mitgliedschaft konnte nicht bestätigt werden
+    vat: Identifikationsnummer für Steuern
+    total: Gesamter Betrag bitte erst einmal rausnehmen/ unsichtbar machen
+    status:
+      pending: Offen
+      valid: Gültig
+      expired: Abgelaufen
+    created_at: Erstellt
+    subscription_id: Mitgliedschaftsnummer
+  membership_type:
+    level: Mitgliedschaftsstufe
+    cost: Kosten  bitte unsichtbar 
+    vat: UST / MWST
+    total: Gesamt bitte unsichtbar machen
+  language:
+    en: Englisch
+    de: Deutsch
+  offer:
+    files_and_media: DE- Files and Media
+    service_price: Servicepreis
+    start_of_service: Servicebeginn
+    name: Produktname (Was wird angeboten?)
+    offers: Angebote
+    title: Angebot oder Gesuch erstellen
+    uploaded_files: Hochgeladene Dokumenten
+    pdf: PDF
+    validations:
+      no_quantity: Bis die Form des Angebotes Service wird, muß eine Menge angegeben
+        werden
+      max_length: Dieses Feld sollte nicht mehr als 13 Buchstaben / Zahlen enthalten
+      has_reserved_word: Gesperrtes Wort für diesen Bereich
+    actions:
+      create: Speichern
+      cancel: Abbrechen
+      search: Suche
+      update: Erneuern / Update
+      delete: Löschen
+      delete_file: Dokument Löschen
+    show:
+      offer_type: Angebotstyp
+      batch_price: Chargenpreis
+    request_type:
+      buy: Gesuch 
+      sell: Angebot 
+      buyer: Käufer
+      seller: Verkäufer
+    flash_success: Angebot gespeichert
+    flash_error: Angebot kann nicht gespeichert werden
+    flash_destroy_success: Angebot wurde erfolgreich gelöscht
+    media:
+      delete_image: Bild Löschen
+  alert:
+    form:
+      offer_description: "Name des Angebotes/des Gesuchs" 
+      i_want_to: "ich möchte"
+      area: Bereich
+      product_type_all: Alle
+      remove: Entfernen
+      add: Neu hinzufügen
+      save: "Änderungen speichern"
+      remove_confirmation: Sind Sie sicher diese Benachrichtigungsfunktion zu löschen.Die
+        Änderung wird gespeichtert nach anklicken  Änderungen gespeichert
+    flash:
+      error_create: Es gab ein Problem beim speichern der Benachrichtigungsfunktion
+      success_create: Benachrichtigungsfunktion wurde erfolgreich erstellt .
+      success_update: Benachrichtigung wurde erfolgreich  abgeändert
+      success_destroy: Benachrichtigungsfunktion wurde erfolgreich gelöscht
+  file_upload:
+    validation:
+      max_file_size: Datei ist zu groß
+      min_file_size: Datei ist zu klein
+      accept_file_types: Dateiformat nicht zulässig
+      max_number_of_files: Maximale Anzahl an Dokumenten erreicht
+      uploaded_bytes: Hochgeladene Bytes überschreiten Datei Größe
+      empty_result: Ergenis des Hochladens einer leeren Datei
+  search:
+    title: Suche Angebote
+    table:
+      by: bei
+      headers:
+        product_name: Produktname
+        region: Region
+        price_per_unit: Preis pro Einheit
+        price_per_unit: Preis pro Einheit
+        service_price: Servicepreis
+        quantity: Menge
+        unit: Einheit
+        area: Bereiche
+        category: Kategorie
+        description: Beschreibung
+        country: Land
+        city: Stadt
+        name_of_buyer: Name des Käufers
+        email_of_buyer: E Mail des Käufers
+        name_of_seller: Name des Verkäufers
+        email_of_seller: E Mail des Verkäufers
+  help:
+    how_to_buy: Wie man kauft
+    how_to_sell: Wie man verkauft
+  area:
+    form:
+      categories: Kategorien
+      category: Kategorie
+      remove: Entfernen
+      add: Neue Kategorie hinzufügen
+      save: "Änderungen speichern"
+      remove_confirmation: Sind Sie sicher diesen Bereich zu löschen. Die Änderung
+        wird gespeichtert nach anklicken  Änderungen gespeichert
+    all_areas: Alle Bereiche
+    destroy_success: Bereich wurde erfolgreich gelöscht
+    destroy_failure: Fehler beim Löschen des Bereiches
+    area_in_use: Sie können nicht einen Bereich löschen, der bereits verwendet wurde
+    create: Bereich anlegen
+    edit: Bearbeiten
+    destroy: Löschen
+  profile:
+    invoice: Rechnung
+    membership: Mitgliedschaft
+    renewal: Erneuerung der Mitgliedschaft
+    media:
+      media: Medien
+      video: Video
+      add_video: Video hinzufügen
+      image: Bild
+      image_destroy_success: Bild wurde erfolgreich gelöscht
+      add_image: Bild hinzufügen
+      delete: Löschen
+    file:
+      flash_destroy_success: Dokument wurde erfolgreich gelöscht
+      files: Dokumente
+      file: Dokument
+      pdf_only: nur PDF
+      delete: Löschen
+      add: PDF hinzufügen
+      save_documents: Speichern von Dokumenten
+  blacklist:
+    edit: Bearbeiten
+    index: Index
+  notifications:
+    welcome:
+      subject: Willkommen bei Zentratoo
+      text_html: 'Hallo Nutzer, Willkommen bei Zentratoo. Ihr Konto wird derzeit überprüft
+        und Sie haben nur begrenzten Zugang ,Sie werden über den Ausgang der Überprüfung
+        informiert. Sie können sich jederzeit einloggen indem Sie nachfolgende Seite
+        aufrufen :'
+      text: 'Hallo Nutzer, Willkommen bei Zentratoo. Ihr Konto wird derzeit überprüft
+        und Sie haben nur begrenzten Zugang ,Sie werden über den Ausgang der Überprüfung
+        informiert. Sie können sich jederzeit einloggen indem Sie nachfolgende Seite
+        aufrufen :'
+    existing_offers_alert:
+      subject: 'Zentratoo: Es existieren Produkte oder Nachfragen gem. Ihrer Alert-Funktion'
+      header: Produkte oder Nachfragen, die Ihrem Alert-Auftrag entsprechen
+      text: 'Sehen Sie sich das Angbot hier an:'
+      petitions: "Gesuch:"
+      products: "Angebot:"
+    alert:
+      subject: 'Zentratoo:  Alarm'
+      header: Ein neues Angebot wurde erstellt
+      text: Bitte auf nachfolgenden Link klicken um das Angebot aufzurufen
+    pre_expiration:
+      subject: Zentratoo Mitgliedschaft ist abgelaufen
+      text_html: 'Hallo %{user_name}, in 10 Tagen wird Ihre Zentratoo Mitgliedschaft
+        auslaufen, Bitte loggen Sie sich ein, um sie zu verlängern unter :'
+      text: Hallo %{user_name}, in 10 Tagen wird Ihre Zentratoo Mitgliedschaft auslaufen,
+        Bitte loggen Sie sich ein, um sie zu verlängern unter
+      log_in: Log_in
+    account_created:
+      subject: 'Zentratoo:  %{user_name}  hat ein neues Konto angelegt.'
+      header: Ein neuer Kunde wurde in Zentraoo angeleget
+      text: Bitte auf den nachfolgenden Link klicken um das Profil zu sehen
+    subscription_approved:
+      subject: 'Zentratoo:  Mitgliedschaft bestätigt'
+      text_html: Lieber Nutzer, Ihr Zentratoo Konto wurde bestätigt, Sie haben jetzt
+        vollen Zugang Sie können sich jederzeit einloggen, indem Sie nach .... wechseln
+      text: Lieber Nutzer, Ihr Zentratoo Konto wurde bestätigt, Sie haben jetzt vollen
+        Zugang Sie können sich jederzeit einloggen, indem Sie nach .... wechseln
+    membership_renewal:
+      subject: 'Zentratoo:  %{user_name}  hat sein Mitgliedskonto verlängert.'
+      header: Mitgliedschaft verlängert
+      text: Bitte auf den nachfolgenden Link klicken um das Profil zu sehen
+  user:
+    delete_user: Benutzer loeschen
+    deleted_user_notification: Benutzer erfolgreich geloescht
+    ban_user: Benutzer sperren
+    cancel_ban: Benutzer nicht sperren
+    no_rating: Sie haben noch keine Bewertungen
+    no_subscription: Sie müssen eine Mitgliedschaft haben
+    access_denied: Zugriff abgelehnt
+    verified_address: Verifizierte Adresse
+    address_not_verified: Adresse nicht verifiziert
+    edit_password: Passwort bearbeiten
+    password_saved: Ihr Passwort wurde gespeichert
+    edit_profile: Profil bearbeiten
+    profile_saved: Ihr Profil wurde gespeichert
+    profile_error: Fehler in Ihrem Profil
+    activation_date: Datum der Aktivierung
+    has_no_subscriptions: Keine Anmeldedaten
+  activerecord:
+    errors:
+      models:
+        alert:
+          attributes:
+            product_name:
+              blank: Muss ausgefüllt werden
+        subscription:
+          attributes:
+            membership_type:
+              blank: Mitgliedschaft muß ausgewählt werden
+        product:
+          contains_banned_word: Enthält ein unzulässiges Wort
+          date_of_manufacture_format_wrong: muss ein Datum sein
+        petition:
+          contains_banned_word: Enthält ein unzulässiges Wort
+          date_of_manufacture_format_wrong: muss ein Datum sein
+    model:
+      user: Nutzer
+      area: Bereich
+      category: Kategorie
+      petition: Nachfrage
+      product: Produkt
+      unit: Einheit
+    attributes:
+      subscription:
+        amount_paid: Betrag bezahlt
+        invoice: Rechnung
+        invoice_number: Rechnungsnummer
+        start_date: Beginn
+        status: Zahlungsstatus
+        membership_status: Mitgliedschaftsstatus
+        membership_type: Mitgliedschaftsform
+        subscription_from: Mitgliedschaftsform
+        subscription_to: Eingetragen als
+        cost: Kosten
+        subtotal: Gesamter Betrag
+        discount: Rabatt
+        invoice_subtotal: Rechnung Gesamtbetrag
+        vat: Steuernummer
+        total: Gesamt
+      user:
+        full_name: Vollständiger Name
+        first_name: Vorname
+        email: Email
+        password: Passwort
+        last_name: Nachname
+        company: Firmenname
+        vat: UST / MWST, Prozent
+        address: Adresse
+        country: Land
+        country_code: Ländervorwahl
+        area_code: Ortsvorwahl
+        phone: Telefon
+        fax: Fax
+        summary: Zusammenfassung
+        language: Sprache
+        unit_system: Einheitssystem
+        terms_of_service: Akzeptanz der AGB
+        current_password: Aktuelles Passwort
+        password_confirmation: Passwort Bestätigung
+      area:
+        name: Name
+        no_quantity: Nicht zu beziffernder Bereich
+      category:
+        name: Name
+      petition:
+        name: Name
+        unit: Einheit
+        description: Beschreibung
+        date_of_manufacture: Herstellungsdatum
+        quantity: Menge
+        price: Preis pro Einheit
+        region: Region
+      product:
+        name: Name
+        unit: Einheit
+        description: Beschreibung
+        date_of_manufacture: Herstellungsdatum
+        quantity: Menge
+        price: Preis pro Einheit
+        region: Region
+      blacklist:
+        language: Sprache
+        list: Liste

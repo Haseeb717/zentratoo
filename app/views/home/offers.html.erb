@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
         <div class="create-offer-head">
-          <h1> Search Offers </h1>
+          <h1> Search Products </h1>
         </div>
         <div class="search-offers">
           <div class="row">
@@ -11,7 +11,7 @@
               <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">
                 <div class="form-field3">
                   <p> Request Type </p>
-                  <%= select_tag :request_type, options_for_select(["Buy","Sell"]),{:prompt=>"Select Request Type"} %>
+                  <%= select_tag :request_type, options_for_select(["Offers","Requests"]),{:prompt=>"Select Product Type"} %>
                 </div>
               </div>
               <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6">

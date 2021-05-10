@@ -1,0 +1,44 @@
+---
+en:
+  simple_form:
+    labels:
+      profile_files:
+        description: Description
+        file_url: Document
+      profile:
+        save: Save
+        save_images: Save Images
+        save_video: Save Video
+        supported_formats:
+          pdf: The supported file format is pdf
+      subscription:
+        membership_type_id: Membership Type
+      defaults:
+        password_confirmation: Password Confirmation
+      offer:
+        name: Name of product or of an offer (what is beign offered?)
+        request_type: Request Type
+        search: Search
+        description: Description
+        date_of_manufacture: Date of Manufacture
+        region: Region
+        image_url: Image url
+        video_url: Video url
+        unit_id: Unit
+        price: Price Per Unit
+        supported_formats:
+          mp4: The supported video format is mp4
+          pdf: The supported file format is pdf
+        quantity: Quantity
+        area_id: Area id
+        category_id: Category
+        file_description: Document Description
+        file_url: Document
+        currency_id: Currency
+    'yes': 'Yes'
+    'no': 'No'
+    required:
+      text: required
+      mark: "*"
+    error_notification:
+      default_message: 'Please review the problems below:'

@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'activeadmin'
-
+gem 'rails-i18n'
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

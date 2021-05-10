@@ -1,0 +1,44 @@
+---
+de:
+  simple_form:
+    labels:
+      profile_files:
+        description: Beschreibung
+        file_url: Dokument
+      profile:
+        save: Speicher
+        save_images: Bilder speichern
+        save_video: Video speichern
+        supported_formats:
+          pdf: Das unterstützte Format ist pdf
+      subscription:
+        membership_type_id: Mitgliedschaftsform
+      defaults:
+        password_confirmation: Passwort Bestätigung
+      offer:
+        name: Was wird gesucht bzw. angeboten?
+        request_type: Anfrageform
+        search: Suche
+        description: Beschreibung
+        date_of_manufacture: Herstellungsdatum
+        region: Region
+        image_url: Bild hochladen
+        video_url: Video Url
+        unit_id: Einheit
+        price: Preis per Einheit
+        supported_formats:
+          mp4: Das unterstützte Format ist MP4
+          pdf: Das unterstützte Format ist pdf
+        quantity: Menge
+        area_id: Regions Code
+        category_id: Kategorie
+        file_description: Dokumentbeschreibung
+        file_url: Dokument hochladen
+        currency_id: Währung
+    'yes': Ja
+    'no': Nein
+    required:
+      text: erforderlich
+      mark: "*"
+    error_notification:
+      default_message: Bitte diese Probleme/ Information unten überprüfen

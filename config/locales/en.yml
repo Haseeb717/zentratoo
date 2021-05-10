@@ -1,33 +1,456 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  footer:
+    copyright: "©2015-2016 Zentratoo. All rights reserved"
+    version: Version
+  simple_form:
+    labels:
+      defaults:
+        name_en: Name (English)
+        name_de: Name (German)
+  navigation:
+    back: Back
+  helpers:
+    label:
+      user:
+        remember_me: Remember me
+  rate:
+    error: 'Error: Rating was not saved'
+  registration:
+    validations:
+      required_field: This is a required field
+      email: Please add a valid email
+    payment_method: Payment Method
+    offline_payment: Offline Payment
+  devise:
+    sign_in: Sign In    
+  errors:
+    cant_be_blank: Cant be blank
+    must_be_a_number: Must be a number
+  confirmation:
+    are_you_sure: Are you sure?
+  navbar:
+    all_companies: All Companies
+    terms: Terms of Service
+    contact: Contact Us
+    imprint: Imprint
+    about_us: About Us
+    help: Help
+    data_privacy: Data Privacy
+    offer: Create Product/Request 
+    search: Search
+    alerts: Alerts
+    products_and_petitions: Products and Petitions
+    petitions: Requests
+    products: Products
+    login: Login
+    register: Register
+    sign_out: Logout
+    more: More
+    my_zentratoo: My Zentratoo
+    dropdown:
+      language: Language
+      english: English
+      german: German
+    admin_dropdown:
+      admin: Admin
+      subscription_confirmation: Subscription Confirmation
+      blacklisted_words: Blacklisted Words
+      currencies: Currencies
+      areas: Areas
+      units: Units
+      list_of_all_companies: List of all Companies
+      banned_users: Banned Users
+      version_number: Version Number
+    second:
+      global: Global Concentrated Trade Network
+  pages:
+    about_us:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    contact:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    help:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    how_to_buy:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    how_to_sell:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    imprint:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+    terms:
+      text: Numquam et voluptate veritatis minus perspiciatis facere laboriosam. Non
+        doloremque ex. Nihil quaerat voluptate. Voluptate ut cupiditate. Ducimus repudiandae
+        aut fuga dolor earum libero. Et atque non est ipsum. Minima voluptatem eius
+        nam dicta. Deserunt explicabo esse omnis blanditiis et et alias. Itaque eligendi
+        natus perferendis iure sint est ut.
+  widget:
+    most_recent_users:
+      new_companies: New Companies  
+    most_visited:
+      products: Most Viewed Products
+      petitions: Most Viewed Requests
+      name: Name
+      created: Created
+    most_recent:
+      products: Newest Offers
+      petitions: Newest Requests
+      name: Name
+      created: Created
+  currency:
+    currencies_warning: 'Warning: Dont delete a currency that has already been used in an offer'
+    currency_conversions: Currency Conversions on oanda.com (opens in a new window)
+    in_use: You cannot delete a Currency that has already been used
+    show: Show
+    create: Create
+    edit: Edit
+    destroy: Delete
+    new: New Currency
+  unit:
+    listing: Listing non convertable units
+    si: SI
+    imperial: Imperial
+    in_use: You cannot delete a unit that has already been used
+    show: Show
+    create: Create
+    edit: Edit
+    destroy: Delete
+    new: New Unit
+    name: Name
+    symbol: Symbol
+  unit_conversion:
+    reference: Reference
+    unit_symbol: Unit Symbol
+    unit_prefix: Unit Prefix
+    unit_terms: Unit Term
+    unit_property: Unit Property
+    si_unit: SI Unit
+    imperial_unit: Imperial Unit
+    available_units: availiable units symbol table
+    hint: you must use an available symbol
+    listing: Listing Unit Conversions
+    si_unit_name_de: SI Unit Name DE
+    si_unit_name_en: SI Unit Name EN
+    si_symbol: SI Symbol
+    imperial_symbol: Imperial Symbol
+    imperial_unit_name_de: Imperial Unit Name DE
+    imperial_unit_name_en: Imperial Unit Name EN
+    si_conversion_rate: SI Conversion Rate
+    in_use: You cannot delete a Unit Conversion that has Unit that has already been
+      used
+    show: Show
+    create: Create
+    edit: Edit
+    destroy: Delete
+    new: New Unit Conversion
+  subscription:
+    complete_renewal: Complete Renewal
+    approve: Approve
+    cost: Cost
+    subtotal: Subtotal
+    discount: Discount
+    invoice_subtotal: Invoice Subtotal
+    awaiting_confirmation: Your membership renewal request is awaiting for confirmation
+    flash_success: Thank You, you will be contacted soon after processing your membership
+    flash_error: There was an error and the subscription could not be saved
+    vat: ID for taxes
+    total: Total
+    status:
+      pending: Pending
+      valid: Valid
+      expired: Expired
+    created_at: Created At
+    subscription_id: Subscription ID
+  membership_type:
+    level: Membership Level
+    cost: Cost
+    vat: VAT
+    total: Total
+  language:
+    en: English
+    de: German
+  offer:
+    files_and_media: Files and Media
+    service_price: Service Price
+    start_of_service: Start of Service    
+    name: Name of product or offer (What is being offered?)
+    offers: Offers
+    title: Create an Offer
+    uploaded_files: Uploaded Documents
+    pdf: pdf
+    validations:
+      no_quantity: Unless a offer type is 'service' It must have a quantity
+      max_length: This field shouldn't contain more than 13 characters
+      has_reserved_word: is a banned word for this area or category
+    actions:
+      create: Save
+      cancel: Cancel
+      search: Search
+      update: Update
+      delete: Delete
+      delete_file: Delete File
+    show:
+      offer_type: Offer Type
+      batch_price: Batch Price
+    request_type:
+      buy: Buy
+      sell: Sell
+      buyer: Buyer
+      seller: Seller
+    flash_success: Offer Saved
+    flash_error: Offer cannot be saved
+    flash_destroy_success: Offer was successfully deleted
+    media:
+      delete_image: Delete Image
+  alert:
+    form:
+      offer_description: "Product / Offer Name"
+      i_want_to: "I Want To"
+      area: Area
+      product_type_all: All
+      remove: Remove
+      add: Add new
+      save: Save changes
+      remove_confirmation: |-
+        Are you sure to remove this alert?
+        The change will be saved after clicking Save changes
+    flash:
+      error_create: There was a problem saving your alerts
+      success_create: Alert was successfully created
+      success_update: Alert was successfully updated
+      success_destroy: Alert was successfully deleted
+  file_upload:
+    validation:
+      max_file_size: File is too big
+      min_file_size: File is too small
+      accept_file_types: Filetype not allowed
+      max_number_of_files: Max number of documents exceeded
+      uploaded_bytes: Uploaded bytes exceed file size
+      empty_result: Empty file upload result
+  search:
+    title: Search Offers
+    table:
+      by: by
+      headers:
+        product_name: Product Name
+        region: Region
+        price_per_unit: Price Per Unit
+        service_price: Service Price
+        quantity: Quantity
+        unit: Unit
+        area: Area
+        category: Category
+        description: Description
+        country: Country
+        city: City
+        name_of_buyer: Name of Buyer
+        email_of_buyer: Email of Buyer
+        name_of_seller: Name of Seller
+        email_of_seller: Email of Seller
+  help:
+    how_to_buy: How to Buy
+    how_to_sell: How to Sell
+  area:
+    form:
+      categories: Categories
+      category: Category
+      remove: Remove
+      add: Add new category
+      save: Save changes
+      remove_confirmation: |-
+        Are you sure to remove this area?
+        The change will be saved after clicking Save changes
+    all_areas: All Areas
+    destroy_success: The Area has been successfully deleted
+    destroy_failure: There was an error deleting the area
+    area_in_use: You cannot delete an area that has already been used
+    create: Create
+    edit: Edit
+    destroy: Delete
+  profile:
+    invoice: Invoice
+    membership: Membership
+    renewal: Membership renewal
+    media:
+      media: Media
+      video: Video
+      add_video: Add Video
+      image: Image
+      image_destroy_success: Image was successfully deleteded
+      add_image: Add Image
+      delete: Delete
+    file:
+      flash_destroy_success: Document was successfully deleted
+      files: Documents
+      file: Document
+      pdf_only: PDF only
+      delete: Delete
+      add: Add pdf
+      save_documents: Save Documents
+  blacklist:
+    edit: Edit
+    index: Index
+  notifications:
+    welcome:
+      subject: Welcome to Zentratoo
+      text_html: 'Hello %{user_name},<br> Welcome to Zentratoo. Your account is currently
+        being reviewed and has limited access, and you will be notified upon approval.
+        <br>You can log in at any time by going to:'
+      text: 'Hello %{user_name},Welcome to Zentratoo. Your account is currently being
+        reviewed and has limited access, and you will be notified upon approval. You
+        can log in at any time by going to:'
+    existing_offers_alert:
+      subject: 'Zentratoo: There are products or requests that match your alerts'
+      header: Products or requests that match your alerts
+      text: 'Please click the following link to view the Offer:'
+      petitions: "Requests:"
+      products: "Products:"
+    alert:
+      subject: 'Zentratoo: %{offer_type} Alert'
+      header: A new Offer in Zentratoo has been created.
+      text: 'Please click the following link to view the Offer:'
+    pre_expiration:
+      subject: Zentratoo Subscription Expiration
+      text_html: 'Hello %{user_name},<br> in 10 days your Zentratoo subscription will
+        expire. Please log in to renew your subscription at:'
+      text: 'Hello %{user_name}, In 10 days your Zentratoo subscription will expire.
+        Please log in to renew your subscription at:'
+      log_in: log_in
+    account_created:
+      subject: 'Zentratoo: %{user_name} has created a new Account'
+      header: A new User in Zentratoo has been created.
+      text: 'Please click the following link to view the profile:'
+    subscription_approved:
+      subject: 'Zentratoo: Approved Subscription'
+      text_html: 'Hello %{user_name},<br>Your Zentratoo account has been approved.
+        You now have full access!<br> You can log in at any time by going to:'
+      text: "Hello %{user_name},Your Zentratoo account has been approved. You now
+        have full access! You can log in at any time by going to:"
+    membership_renewal:
+      subject: "Zentratoo: %{user_name} has renewed his/her account"
+      header: A membership has been renewed
+      text: 'Please click the following link to view the profile:'
+  user:
+    delete_user: Delete User
+    deleted_user_notification: The user has been deleted successfully
+    ban_user: Ban User
+    cancel_ban: Cancel User Ban
+    no_rating: You do not have rating yet
+    no_subscription: You need to have a membership
+    access_denied: Access Denied
+    verified_address: Verified address
+    address_not_verified: Address Not Verified
+    edit_password: Edit Password
+    password_saved: Your Password Has Been Saved
+    edit_profile: Edit Profile
+    profile_saved: Your Profile Has Been Saved
+    profile_error: There was an error in your profile
+    activation_date: Activation Date
+    has_no_subscriptions: no subscriptions
+  activerecord:
+    errors:
+      models:
+        alert:
+          attributes:
+            product_name:
+              blank: can't be blank
+        subscription:
+          attributes:
+            membership_type:
+              blank: ": a Membership Level must be selected."
+        product:
+          contains_banned_word: contains a banned word
+          date_of_manufacture_format_wrong: must be a valid date
+        petition:
+          contains_banned_word: contains a banned word
+          date_of_manufacture_format_wrong: must be a valid date
+    model:
+      user: User
+      area: Area
+      category: Category
+      petition: Request
+      product: Product
+    attributes:
+      subscription:
+        amount_paid: Amount Paid
+        invoice: Invoice
+        invoice_number: Invoice Number
+        start_date: Start Date
+        status: Payment Status
+        membership_status: Subscription Status
+        membership_type: Membership Type
+        subscription_from: Subscription From
+        subscription_to: Subscription To
+        cost: Cost
+        subtotal: Subtotal
+        discount: Discount
+        invoice_subtotal: Invoice Subtotal
+        vat: ID for taxes
+        total: Total
+      user:
+        full_name: Full Name
+        first_name: First Name
+        email: Email
+        password: Password
+        last_name: Last Name
+        company: Company name
+        vat: VAT, percent
+        address: Address
+        country: Country
+        country_code: Country Code
+        area_code: Area Code
+        phone: Phone
+        fax: Fax
+        summary: Summary
+        language: Language
+        unit_system: Unit system
+        terms_of_service: Accept Terms of Service
+        current_password: Current Password
+        password_confirmation: Password Confirmation
+      area:
+        name: Name
+        no_quantity: Non quantitative area
+      category:
+        name: Name
+      petition:
+        name: Name
+        unit: Unit
+        description: Description
+        date_of_manufacture: Date of Manufacture
+        quantity: Quantity
+        price: Price Per Unit
+        region: Region
+      product:
+        name: Name
+        unit: Unit
+        description: Description
+        date_of_manufacture: Date of Manufacture
+        quantity: Quantity
+        price: Price Per Unit
+        region: Region
+      blacklist:
+        language: Language
+        list: List
